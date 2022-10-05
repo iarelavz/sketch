@@ -1,0 +1,15 @@
+#container {
+    display: grid;
+    width: 960px;
+    height: 960px;
+
+    
+}
+
+.content {
+    aspect-ratio: 1;
+}
+#button{
+    color: black;
+    margin-bottom: 40px;
+}

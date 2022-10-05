@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">New grid</button>
+    <div id="container">
+    </div>  
+    <script>
+        const container = document.querySelector('#container');
+        const button = document.querySelector('#button');
+
+        button.addEventListener('click', () => {
+            let size = prompt("Please add the size of the drawing grid");
+            while (container.firstChild) {
+                container.removeChild(container.lastChild);
+            };
+            sketch(size);
+        });
+
+        function sketch(gridsize) {
+            let sizing= gridsize*gridsize;
+            if (gridsize >0 && gridsize <100) {
+                container.setAttribute('style','grid-template-columns: repeat(' + gridsize + ', 1fr)');
+                for(x=0; x<sizing;x++) {
+                    const content = document.createElement('div');
+                    content.classList.add('content');
+                    container.appendChild(content);
+                
+                };
+                container.addEventListener('mouseover', function (event) {
+                    event.target.style.backgroundColor = 'black';
+        });
+            } else {
+                alert("The size should be lower than 100");
+            };
+        };
+        
+
+     
+        
+        
+       
+    
+        
+    </script>
+</body>
+</html>
