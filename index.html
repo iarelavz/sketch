@@ -8,9 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="button">New grid</button>
-    <div id="container">
-    </div>  
+    <div class=" mainbody">
+        <div class="header">
+            <div class="title">Sketcher</div>
+        </div>
+        <div class="contcontainer">
+            <div id="container"></div>  
+        </div>
+        <div class="buttoncontainer">
+            <button id="button">New grid</button>
+        </div>
+    </div>
     <script>
         const container = document.querySelector('#container');
         const button = document.querySelector('#button');
@@ -31,11 +39,11 @@
                     const content = document.createElement('div');
                     content.classList.add('content');
                     container.appendChild(content);
-                
+                    content.addEventListener('mouseover', function (event) {
+                     event.target.style.backgroundColor = '#FECD70';
+                    });
                 };
-                container.addEventListener('mouseover', function (event) {
-                    event.target.style.backgroundColor = 'black';
-        });
+                
             } else {
                 alert("The size should be lower than 100");
             };

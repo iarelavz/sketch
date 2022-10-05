@@ -1,8 +1,30 @@
+
+
+
+.mainbody {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: salmon;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.title {
+    font-size: 48px;
+    color: #E3C770;
+    font-weight: bold;
+}
 #container {
     display: grid;
-    width: 960px;
-    height: 960px;
-
+    width: 560px;
+    height: 560px;
+    border: solid #E3C770;
     
 }
 
@@ -10,6 +32,11 @@
     aspect-ratio: 1;
 }
 #button{
-    color: black;
-    margin-bottom: 40px;
+    background-color:salmon;
+    margin: 40px;
+    color: #E3C770;
+    font-weight: bold;
+    border-color: #E3C770;
+    font-size: 32px;
+
 }
