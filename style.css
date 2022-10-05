@@ -19,6 +19,8 @@
     font-size: 48px;
     color: #E3C770;
     font-weight: bold;
+    border:solid #E3C770;
+    padding:5px;
 }
 #container {
     display: grid;
@@ -38,5 +40,15 @@
     font-weight: bold;
     border-color: #E3C770;
     font-size: 32px;
+    border: solid;
+    padding: 5px;
 
 }
+
+#button:hover {
+    border-color: white;
+    color: white;
+    background-color: #E3C770;
+    transition: 0.7s;
+}
+
